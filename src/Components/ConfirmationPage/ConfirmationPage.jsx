@@ -66,11 +66,11 @@ const ConfirmationPage = () => {
 
         handler: ({ payment_id }) => {
           dispatch(setAllOrders(data))
+          navigate("/order-summary")
           dispatch(setCheckInDate(""))
           dispatch(setCheckOutDate(""))
           dispatch(setDestination(""))
           dispatch(setGuests(0))
-          navigate("/order-summary")
         },
         
         prefill: {
