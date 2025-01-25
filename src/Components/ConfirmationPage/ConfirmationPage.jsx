@@ -64,6 +64,7 @@ const ConfirmationPage = () => {
         contact: "9914173314",
         description: "Thankyou For Booking",
 
+
         handler: ({ payment_id }) => {
           dispatch(setAllOrders(data))
           navigate("/order-summary")
@@ -72,7 +73,9 @@ const ConfirmationPage = () => {
           dispatch(setDestination(""))
           dispatch(setGuests(0))
         },
-        
+
+        callback_url: "https://hikestravels.netlify.app/order-summary",
+
         prefill: {
           name: "Arham",
           email: "arham12@gmail.com",
