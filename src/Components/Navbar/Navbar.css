@@ -1,0 +1,10 @@
+.form-container{
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.form-option{
+    font-size: .875rem;
+    padding: 8px;
+    opacity: 10;
+}
