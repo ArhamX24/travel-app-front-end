@@ -132,7 +132,7 @@ const ProfilePage = () => {
       <h2 className='text-3xl text-primary text-center mt-4 mb-1'>Your Profile</h2>
       <p className='border-b-2 border-primary w-1/2 mx-auto mb-3'></p>
       {
-        user?.username == "Dummy" ? <p className='text-center'>These are dummy credentials so delete account is disabled.</p> : ""
+        user?.email == "dummy@gmail.com" ? <p className='text-center'>These are dummy credentials so delete account is disabled.</p> : ""
       }
       
       <div className="bg-gray-100 flex flex-col items-center py-8">
@@ -146,7 +146,7 @@ const ProfilePage = () => {
                 isLoadingEdit ? <span className="loading loading-spinner loading-md mx-auto"></span>  : "Edit Profile"
               }
             </label>
-            <button className={ user?.username == "Dummy" ?  `btn btn-outline btn-error text-screenColor ml-3 hover:bg-hoverColor hover:text-white cursor-not-allowed opacity-20 pointer-events-none w-1/2` : 'btn btn-outline btn-error text-screenColor ml-3 hover:bg-hoverColor hover:text-white w-1/2'} onClick={handleDelete}>
+            <button className={ user?.email == "dummy@gmail.com" ?  `btn btn-outline btn-error text-screenColor ml-3 hover:bg-hoverColor hover:text-white cursor-not-allowed opacity-20 pointer-events-none w-1/2` : 'btn btn-outline btn-error text-screenColor ml-3 hover:bg-hoverColor hover:text-white w-1/2'} onClick={handleDelete}>
               {
                 isLoadingDelete ? <span className="loading loading-spinner loading-md pt-3"></span>  : "Delete Account"
               }
