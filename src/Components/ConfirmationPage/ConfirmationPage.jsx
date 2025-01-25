@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
 import { setAllOrders } from '../Store/UserSlice'
+import { setCheckInDate, setCheckOutDate, setDestination, setGuests } from '../Store/DateSlice'
 
 const ConfirmationPage = () => {
     let {id} = useParams()
@@ -65,6 +66,10 @@ const ConfirmationPage = () => {
 
         handler: ({ payment_id }) => {
           dispatch(setAllOrders(data))
+          dispatch(setCheckInDate(""))
+          dispatch(setCheckOutDate(""))
+          dispatch(setDestination(""))
+          dispatch(setGuests(0))
           navigate("/order-summary")
         },
         
