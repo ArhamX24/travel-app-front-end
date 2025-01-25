@@ -40,19 +40,19 @@ const Categories = () => {
     }, [noOfCategoriesToShow])
     
   return (
-    <div className='flex items-center justify-around lg:justify-evenly gap-4 lg:gap-8 categories w-full py-4'>
+    <div className='flex items-center justify-around lg:justify-evenly lg:gap-8 categories w-full py-4'>
         {
             noOfCategoriesToShow >= 10 ?
             <div className='w-1/12 bg-primary flex items-center justify-center rounded-full ml-2 cursor-pointer duration-500 ease-in-out' onClick={handleLeftShowMore}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(255,255,255,1)"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
             </div>
             :
-            <div className='w-1/12'></div>
+            <div className=''></div>
         }
         <div className='w-3/5 md:w-4/5 lg:w-2/3 flex justify-around items-center'>
             {
                 categories == null ? <CategoriesSkeleton></CategoriesSkeleton> :
-                categories?.map((category) => <span key={category._id} className={category.category == hotelCategory ? 'text-black mr-3 text-sm md:text-md cursor-pointer link clicked' : "text-black mr-3 text-sm md:text-md cursor-pointer link"}
+                categories?.map((category) => <span key={category._id} className={category.category == hotelCategory ? 'text-black ml-1 lg:ml-3 text-sm md:text-md cursor-pointer link clicked' : "text-black ml-1 lg:ml-3 text-sm md:text-md cursor-pointer link"}
                 onClick={()=> handleCategory(category.category)}>{category.category}</span>)
             }
         </div>

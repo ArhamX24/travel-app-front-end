@@ -62,7 +62,7 @@ const SingleHotelPage = () => {
     const handleReserve = () => {
       if(userLoggedIn){
         if(checkInDate == null && checkOutDate == null){
-          alert("Please Enter Check-in & Check-Out Dates & No Of Guests")
+          alert("Please Enter Check-in & Check-Out Dates")
         }else{
           navigate(`/confirm/${address}/${id}`)
         }
@@ -219,9 +219,10 @@ const SingleHotelPage = () => {
              <div className='underline mb-1'>
                {price}/nights
              </div>
-             <div>
-               {checkInDate} - {checkOutDate}
+             <div className='flex items-center justify-between'>
+             <DateSelector type={"in"} width={20}></DateSelector> - <DateSelector type={"out"} width={20}></DateSelector>
              </div>
+             
              </div>
              <div onClick={handleReserve} className='w-1/2 flex items-center justify-center'>
                <span className='py-3 px-4 w-4/5 text-center text-white bg-primary rounded-lg mt-4 cursor-pointer font-light hover:scale-95 ease-out duration-300'>Reserve</span>

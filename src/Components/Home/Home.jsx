@@ -125,7 +125,7 @@ const Home = () => {
           <div className='w-11/12 hidden lg:block'>
               <Categories></Categories>
           </div>
-          <div className="w-4/5 lg:hidden">
+          <div className="w-3/4 lg:hidden">
           <MobileCategories></MobileCategories>
           </div>
           <div className='flex items-center justify-center'>

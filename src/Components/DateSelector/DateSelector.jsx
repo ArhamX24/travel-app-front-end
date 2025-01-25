@@ -29,7 +29,7 @@ const DateSelector = ({placeholder, type, width}) => {
         dateFormat={"dd/MM/yyyy"}
         placeholderText={placeholder}
         closeOnScroll={true}
-        className={`focus:outline-none bg-gray-100 border px-2 py-1 rounded-lg text-black w-${width}`}
+        className={`focus:outline-none bg-transparent text-sm border px-2 py-1 rounded-lg text-black w-${width}`}
         ></Datepicker>
     )
 }
